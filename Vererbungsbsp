@@ -1,0 +1,33 @@
+class Spiel:
+    def __init__(self, name, anzahl_spieler):
+        self.name = name
+        self.anzahl_spieler = anzahl_spieler
+
+    def beschreibung(self):
+        return f"{self.name} kann von {self.anzahl_spieler} Spielern gespielt werden."
+
+
+class Schach(Spiel):
+    def __init__(self):
+        super().__init__(name="Schach", anzahl_spieler=2)
+
+    def rules(self):
+        return "Schach wird auf einem 8x8-Brett gespielt. Ziel ist es den König des Gegners schachmatt zu setzen."
+
+
+class MenschÄrgereDichNicht(Spiel):
+    def __init__(self):
+        super().__init__(name="Mensch ärgere dich nicht", anzahl_spieler=4)
+
+    def rules(self):
+        return "Das Ziel ist es, alle eigenen Figuren ins Ziel zu bringen und alle andere zu blockieren oder töten."
+
+
+if __name__ == "__main__":
+    schach = Schach()
+    print(schach.beschreibung())
+    print(schach.rules())
+
+    mädn = MenschÄrgereDichNicht()
+    print(mädn.beschreibung())
+    print(mädn.rules())
