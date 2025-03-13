@@ -35,12 +35,6 @@ class LinkedList:
             current = current.next
         print(elements)
 
-    def __iter__(self):
-        current = self.head
-        while current:
-            yield current.value
-            current = current.next
-
 if __name__ == '__main__':
     ll = LinkedList()
 
@@ -54,7 +48,3 @@ if __name__ == '__main__':
     ll.display()
 
     print(f"Länge der Liste: {len(ll)}")
-
-    print("Iterator-Protokoll:")
-    for element in ll:
-        print(element)
